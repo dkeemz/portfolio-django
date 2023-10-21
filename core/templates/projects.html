@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<a href="{% url "core:index" %}"> home</a>
+<section class="projects-section">
+  <section class="project-container">
+    <img src="{% static "./assets/github.svg" %}" alt="project 1" srcset="" />
+    <h2>title: Item 1</h2>
+    <p>Lorem ipsum dolor</p>
+  </section>
+  <section class="project-container">
+    <img src="{% static "./assets/linkedin.svg" %}" alt="project 1" srcset="" />
+    <h2>title: Item 1</h2>
+    <p>Lorem ipsum dolor</p>
+  </section>
+  <section class="project-container">
+    <img src="{% static "./assets/instagram.svg" %}" alt="project 1" srcset="" />
+    <h2>title: Item 1</h2>
+    <p>Lorem ipsum dolor</p>
+  </section>
+</section>
+{% endblock content %} 

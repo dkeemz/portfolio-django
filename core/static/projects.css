@@ -1,0 +1,52 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.projects-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.projects-section .project-container{
+    width: 25%;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.projects-section .project-container:hover{
+    box-shadow:  2px 2px 15px 5px black;
+    z-index: 2;
+    padding: 3px;
+}
+.projects-section .project-container img{
+height: 75%;
+background-color: white;
+border-radius: 5px;
+}
+.projects-section .project-container h2,p{
+    margin: 5px;
+}
+
+@media only screen and (max-width:600px ) {
+    .projects-section{
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+    .projects-section .project-container{
+        width: 70%;
+        background-color: brown;
+        margin: 5px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+}

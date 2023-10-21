@@ -1,0 +1,89 @@
+{% load static %} 
+{% block header %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static "index.css" %}" />
+    <link rel="stylesheet" href="{% static "skills.css" %}" />
+    <link rel="stylesheet" href="{% static "projects.css" %}" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container">
+        <ul class="link-container" id="header-link-container">
+          <li><a href="{% url 'core:index' %}">Introduction</a></li>
+          <li><a href="{% url 'core:skills' %}">Skills</a></li>
+          <li><a href="{% url 'core:work' %}">Work</a></li>
+          <li><a id="toggle" onclick="change_theme()" href="#">🌙</a></li>
+        </ul>
+      </nav>
+    </header>
+    {% endblock header %} 
+    {% block content %} 
+    {% endblock content %} 
+    {% block footer %}
+    <footer>
+      <section class="main-section">
+        <p>Connect with me on:</p>
+        <ul class="link-container social">
+          <li>
+            <img
+              alt="linkedIn Logo"
+              class="connect-icon"
+              src="{% static "./assets/linkedin.svg" %}"
+            />
+            <a href="https://www.linkedin.com/in/dkeemz/">LinkedIn</a>
+          </li>
+          <li>
+            <img
+              alt="Github Logo"
+              class="connect-icon"
+              src="{% static "./assets/github.svg" %}"
+            /><a href="https://www.github.com/dkeemz">Github</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/dkeemz"
+              ><img
+                alt="Instagram Logo"
+                class="connect-icon"
+                src="{% static "./assets/instagram.svg" %}"
+              />Instagram
+            </a>
+          </li>
+        </ul>
+        <p class="copy-right">Made by Abdulhakeem &copy; 2023 with ❤️</p>
+      </section>
+    </footer>
+    <script>
+      const toggle = document.getElementById("toggle");
+      const headerNav = document.getElementById("header-link-container");
+      const d = (x) => {
+        console.log(x);
+      };
+      const change_theme = () => {
+        if (toggle.innerHTML === "🌙") {
+          toggle.innerHTML = "☀️";
+          document.body.style.backgroundColor = "black";
+          document.body.children[2].style.backgroundColor = "black";
+          document.body.children[0].style.color = "white";
+          document.body.style.color = "white";
+          for (let i = 0; i < 3; i++) {
+            headerNav.children[i].children[0].style.color = "white";
+          }
+        } else {
+          toggle.innerHTML = "🌙";
+          document.body.style.backgroundColor = "white";
+          window.document.body.style.color = "black";
+          document.body.children[2].style.backgroundColor = "#999";
+          for (let i = 0; i < 3; i++) {
+            headerNav.children[i].children[0].style.color = "black";
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
+{% endblock footer %}

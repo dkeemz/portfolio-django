@@ -1,0 +1,32 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+.skill-section{
+    width: 45%;
+    background-color: rgba(10,10,10,.5);
+    display: flex;
+    justify-content: baseline;
+    padding: 5px;
+    margin: auto;
+    flex-direction: column;
+    text-align: left;
+}
+.skill-section p{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    margin: 3px;
+}
+.skill-section p .console{
+    color: #bbb;font-weight: bolder;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.blinks{
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+}
